@@ -1,4 +1,4 @@
-package org.ros.android.android_tutorial_pubsub;
+package org.ros.android;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.BiMap;
