@@ -46,7 +46,6 @@ import org.ros.android.android_core_components.R;
 import org.ros.concurrent.ListenerGroup;
 import org.ros.concurrent.SignalRunnable;
 import org.ros.exception.RosRuntimeException;
-import org.ros.node.DefaultNodeMainExecutor;
 import org.ros.node.NodeConfiguration;
 import org.ros.node.NodeListener;
 import org.ros.node.NodeMain;
@@ -99,7 +98,7 @@ public class NodeMainExecutorService extends Service implements NodeMainExecutor
   public NodeMainExecutorService() {
     super();
     rosHostname = null;
-    nodeMainExecutor = DefaultNodeMainExecutor.newDefault();
+    nodeMainExecutor = RoboosterNodeMainExecutor.newDefault();
     binder = new LocalBinder();
     listeners =
         new ListenerGroup<NodeMainExecutorServiceListener>(
