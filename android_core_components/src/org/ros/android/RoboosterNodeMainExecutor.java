@@ -1,4 +1,4 @@
-package org.ros.android.android_tutorial_pubsub;
+package org.ros.android;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.BiMap;
@@ -70,7 +70,7 @@ public class RoboosterNodeMainExecutor implements NodeMainExecutor {
                 }
 
                 Node node = RoboosterNodeMainExecutor.this.nodeFactory.newNode(nodeConfigurationCopy, nodeListenersCopy);
-                RoboosterNodeMainExecutor.this.nodeMains.put(node, nodeMain);
+                RoboosterNodeMainExecutor.this.nodeMains.forcePut(node, nodeMain);
             }
         });
     }
